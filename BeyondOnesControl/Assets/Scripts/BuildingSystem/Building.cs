@@ -28,19 +28,19 @@ public class Building : MonoBehaviour
         GameObject temp = null;
         if(pSide != Building.Side.RIGHT)
         {
-        temp = Instantiate(structure_prefab, transform.position + new Vector3(5, 0, 0), new Quaternion(0, 0, 0, 0));
+        temp = Instantiate(structure_prefab, transform.position + new Vector3(10, 0, 0), new Quaternion(0, 0, 0, 0));
         temp.GetComponent<BuildingSystem>().setSide(Building.Side.LEFT);
         }
         if(pSide != Building.Side.LEFT){
-        temp =Instantiate(structure_prefab, transform.position + new Vector3(-5, 0, 0), new Quaternion(0, 0, 0, 0));
+        temp =Instantiate(structure_prefab, transform.position + new Vector3(-10, 0, 0), new Quaternion(0, 0, 0, 0));
         temp.GetComponent<BuildingSystem>().setSide(Building.Side.RIGHT);
         }
         if(pSide != Building.Side.DOWN){
-        temp = Instantiate(structure_prefab, transform.position + new Vector3(0, 0, 5), new Quaternion(0, 0, 0, 0));
+        temp = Instantiate(structure_prefab, transform.position + new Vector3(0, 0, 10), new Quaternion(0, 0, 0, 0));
         temp.GetComponent<BuildingSystem>().setSide(Building.Side.UP);
         }
         if(pSide != Building.Side.UP){
-        temp = Instantiate(structure_prefab, transform.position + new Vector3(0, 0, -5), new Quaternion(0, 0, 0, 0));
+        temp = Instantiate(structure_prefab, transform.position + new Vector3(0, 0, -10), new Quaternion(0, 0, 0, 0));
         temp.GetComponent<BuildingSystem>().setSide(Building.Side.DOWN);
         }
     }

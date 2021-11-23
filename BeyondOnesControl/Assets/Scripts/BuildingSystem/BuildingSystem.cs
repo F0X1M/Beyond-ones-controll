@@ -5,7 +5,15 @@ using UnityEngine;
 public class BuildingSystem : MonoBehaviour
 {
     // Start is called before the first frame update
-    
+
+    private float[] Map_States;
+     
+    public int tile_width;
+    public int tile_height;
+    public void initMapStates(){
+        Map_States = new int[];
+    } 
+
     public void setSide(Building.Side pSide)
     {
         side = pSide;
@@ -31,7 +39,6 @@ public class BuildingSystem : MonoBehaviour
                     GameObject temp = Instantiate(building, transform.position, transform.rotation);
                     temp.GetComponent<Building>().ConstructNewSites(side);
                     Destroy(gameObject);
-                    //Debug.Log("This hit at " + hit.point);
                 }
               
             }
